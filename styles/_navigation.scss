@@ -13,6 +13,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 33.5px 0 31.5px;
+
+  @include lg {
+    padding: 20px 0;
+  }
+  @include sm {
+    padding: 12px 0;
+  }
 }
 
 .navigation__logo {
@@ -22,13 +29,76 @@
   text-transform: uppercase;
   color: $white;
 
+  @include sm {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  @include xlm {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
   & span {
     color: $blue2;
   }
 }
 
+.navigation__toggle {
+  display: none;
+
+  &:checked + label {
+    &>.navigation__line:nth-child(1) {
+      transform: rotate(45deg);
+      margin-bottom: -2px;
+    }
+    &>.navigation__line:nth-child(2) {
+      display: none;
+    }
+    &>.navigation__line:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+    & + .navigation__links {
+     display: flex;
+    }
+  }
+}
+
+.navigation__button {
+  display: none;
+  cursor: pointer;
+
+  @include sm {
+    display: block;
+  }
+}
+
+.navigation__line {
+  width: 20px;
+  height: 2px;
+  background-color: $white;
+  margin-bottom: 4px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .navigation__links {
   display: flex;
+
+  @include sm {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    background-color: rgba(16, 16, 29, 0.9);
+    top: 52px;
+    left: -20px;
+    width: calc(100% + 40px);
+    padding: 0 20px;
+  }
+  @include xlm {
+    top: 46px;
+  }
 }
 
 .navigation__link {
@@ -39,6 +109,17 @@
   margin-right: 60px;
   transition: $transition;
   color: $white;
+
+  @include lg {
+    margin-right: 40px;
+  }
+  @include sm {
+    margin-right: 0;
+    padding: 16px 0;
+  }
+  @include xlm {
+    padding: 12px 0;
+  }
 
   &:hover {
     color: $blue3;

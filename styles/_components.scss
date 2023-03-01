@@ -2,6 +2,10 @@
   width: 100%;
   max-width: 1172px;
   margin: 0 auto;
+
+  @include lg {
+    padding: 0 20px;
+  }
 }
 
 button {
@@ -14,6 +18,10 @@ button {
   line-height: 16px;
   text-transform: uppercase;
   transition: $transition;
+
+  @include xlm {
+    width: 100%;
+  }
 }
 
 .button_blue {
@@ -52,6 +60,11 @@ select {
   appearance: none;
   outline: none;
   width: 100%;
+  transition: $transition;
+
+  &:focus {
+    border-color: $blue;
+  }
 
   &:focus + .select__arrow {
     transform: translateY(-50%) rotate(180deg);
@@ -151,6 +164,11 @@ option {
   font-size: 18px;
   line-height: 22px;
   color: $white;
+
+  @include xlm {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .range__percent {

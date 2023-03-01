@@ -727,7 +727,7 @@ input[type=range]:focus::-ms-fill-upper {
     padding-top: 80px;
     padding-bottom: 60px;
     background-position: left;
-    background-image: url(../img/header_mob.png);
+    background-image: url(../img/header_mob.webp);
   }
 }
 

@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'LatoRegular';
+  src: url("../fonts/Lato-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'LatoSemibold';
+  src: url("../fonts/Lato-Semibold.ttf");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'LatoBold';
+  src: url("../fonts/Lato-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'LatoHeavy';
+  src: url("../fonts/Lato-Heavy.ttf");
+  font-style: normal;
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'RalewayHeavy';
+  src: url("../fonts/Raleway-ExtraBold.ttf");
+  font-style: normal;
+  font-weight: 800;
+}
+
+
+html {
+  font-family: 'LatoRegular', sans-serif;
+}
+
+h1 {
+  font-family: 'LatoBold', sans-serif;
+  font-size: 48px;
+  line-height: 58px;
+  color: $black;
+  text-transform: uppercase;
+
+  & span {
+    color: $blue;
+  }
+}
+
+h2 {
+  font-family: 'LatoHeavy', sans-serif;
+  font-size: 36px;
+  line-height: 43px;
+  text-transform: uppercase;
+  width: fit-content;
+  margin: 0 auto;
+  color: $white;
+
+  & span {
+    color: $blue;
+  }
+}

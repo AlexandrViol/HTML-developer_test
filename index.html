@@ -1,1 +1,195 @@
-<h1>Hello Word</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <title>HTML-developer test</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="styles/styles.css" rel="stylesheet">
+</head>
+<body class="index_page">
+    <nav class="navigation">
+        <div class="container">
+            <div class="navigation__content-wrapper">
+                <a href="./" class="navigation__logo">
+                    LoremIpsum.<span>Net</span>
+                </a>
+                <div class="navigation__links">
+                    <a class="navigation__link" href="business-chat">
+                        Бизнес
+                    </a>
+                    <a class="navigation__link" href="about">
+                        О нас
+                    </a>
+                    <a class="navigation__link" href="prices">
+                        Цены
+                    </a>
+                    <a class="navigation__link" href="order">
+                        Оформить заказ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="header">
+        <div class="container">
+            <h1>
+                <span>Lorem ipsum</span> dolor sit
+                <br/>
+                ametconsectetur <span>adipiscing</span>
+            </h1>
+            <p class="header__list-title">
+                At vero eos et accusamus et iusto odio dignissimos ducimus!
+            </p>
+            <ul>
+                <li class="header__list-item">Totam rem aperiam eaque ipsa</li>
+                <li class="header__list-item">Sit voluptatem accusantium doloremque laudantium</li>
+                <li class="header__list-item">Sed ut perspiciatis, unde omnis iste natus error</li>
+            </ul>
+            <a href="lets-chat"><button class="button_blue header__order-button">Заказать</button></a>
+            <a href="careers"><button class="button_white">Подробнее</button></a>
+        </div>
+    </section>
+
+    <section class="ordering">
+        <div class="container">
+            <h2>Оформление <span>Заказа</span></h2>
+            <p class="ordering__subtitle">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+            <div class="ordering__items-wrapper">
+                <div class="ordering__dots"></div>
+                <div class="ordering__item">
+                    <div class="ordering__image-wrapper">
+                        <img src="./img/loupe.svg" alt="Loupe">
+                    </div>
+                    <p class="ordering__item-text">Lorem ipsum dolorsit amet</p>
+                </div>
+                <div class="ordering__item">
+                    <div class="ordering__image-wrapper">
+                        <img  src="./img/percent.svg" alt="Loupe">
+                    </div>
+                    <p class="ordering__item-text">Сonsecteturadipiscing elit</p>
+                </div>
+                <div class="ordering__item">
+                    <div class="ordering__image-wrapper">
+                        <img src="./img/document.svg" alt="Loupe">
+                    </div>
+                    <p class="ordering__item-text">Sed do eiusmod tempor</p>
+                </div>
+                <div class="ordering__item">
+                    <div class="ordering__image-wrapper">
+                        <img src="./img/mail.svg" alt="Loupe">
+                    </div>
+                    <p class="ordering__item-text">Esse cillum doloreeu fugiat</p>
+                </div>
+                <div class="ordering__item">
+                    <div class="ordering__image-wrapper">
+                        <img src="./img/banknote.svg" alt="Loupe">
+                    </div>
+                    <p class="ordering__item-text">Excepteur sint occaecat cupidatat non proident</p>
+                </div>
+            </div>
+            <form class="ordering__form" method="POST" action="">
+                <div class="ordering__inputs-row">
+                    <div class="ordering__select">
+                        <select required name="select">
+                            <option value="" selected disabled hidden>Выберите тип системы</option>
+                            <option>Sed ut perspiciatis</option>
+                            <option>Nemo enim ipsam</option>
+                            <option>Et harum quidem</option>
+                            <option>Temporibus autem</option>
+                            <option>Itaque earum rerum</option>
+                        </select>
+                        <div class="select__arrow"></div>
+                    </div>
+                    <div class="input-wrapper ordering__input-wrapper">
+                        <input placeholder=" " id="form__email" inputmode="email" type="email" name="email" minlength="5" required>
+                        <label for="form__email">Ваш e-mail</label>
+                    </div>
+                    <div class="input-wrapper ordering__input-wrapper">
+                        <input placeholder=" " id="form__name" type="text" name="name" minlength="2" required>
+                        <label for="form__name">Ваше имя</label>
+                    </div>
+                </div>
+                <div class="ordering__inputs-row">
+                    <div class="ordering__range-wrapper">
+                        <div class="range__label-wrapper">
+                            <label for="ordering__range" class="range__label">Sed ut perspiciatis, unde omnis iste natus</label>
+                            <input disabled class="range__percent" type="text" id="range__percent" value="50%" name="percent">
+                        </div>
+                        <input min="0" max="100" onchange="updateTextInput(this.value);" type="range" class="range" id="ordering__range">
+                    </div>
+                    <div class="ordering__input-file-wrapper">
+                        <input name="file" type="file" id="input-file" class="input-file" multiple>
+                        <label for="input-file" class="input-file__button ordering__input-file-button">
+                            <span class="input-file__icon-wrapper"><img class="input-file__icon" src="./img/docSmall.svg" alt="Выбрать файл"></span>
+                            <p class="input-file__text">Прикрепить файл</p>
+                        </label>
+                    </div>
+                </div>
+                <input class="ordering__submit button_blue" id="form__submit" type="submit" value="Отправить">
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <p class="footer__policy">
+                    © 2018 «LoremIpsum.net» Все права защищены.
+                </p>
+                <div class="footer__divider"></div>
+                <div class="footer__section-wrapper">
+                    <p class="footer__payment">
+                        <img src="./img/qiwi.svg" alt="Qiwi wallet">
+                        Qiwi wallet
+                    </p>
+                    <p class="footer__payment">
+                        <img src="./img/Yandex.svg" alt="Yandex Money">
+                        Yandex Money
+                    </p>
+                    <p class="footer__payment">
+                        <img src="./img/webmoney.svg" alt="Web Money">
+                        Web Money
+                    </p>
+                </div>
+                <div class="footer__divider"></div>
+                <div class="footer__section-wrapper">
+                    <a class="footer__link" href="mailto:test@test.io">
+                        <img class="footer__link-img" src="./img/mailSmall.svg" alt="mail">
+                        info@ipsum228.com
+                    </a>
+                    <a class="footer__link" href="">
+                        <img src="./img/vk.svg" alt="Мы вконтакте">
+                        Мы вконтакте
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function updateTextInput(val) {
+            document.getElementById('range__percent').value=val+"%";
+        }
+    </script>
+    <script>
+        let inputs = document.querySelectorAll('.input-file');
+        Array.prototype.forEach.call(inputs, function (input) {
+            let label = input.nextElementSibling,
+                labelVal = label.querySelector('.input-file__text').innerText;
+
+            input.addEventListener('change', function (e) {
+                let countFiles = '';
+                if (this.files && this.files.length >= 1)
+                    countFiles = this.files.length;
+
+                if (countFiles)
+                    label.querySelector('.input-file__text').innerText = 'Выбрано файлов: ' + countFiles;
+                else
+                    label.querySelector('.input-file__text').innerText = labelVal;
+            });
+        });
+    </script>
+</body>
+</html>
+
+

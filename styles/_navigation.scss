@@ -1,0 +1,50 @@
+.navigation {
+  position: fixed;
+  background-color: rgba(16, 16, 29, 0.9);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+.navigation__content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 33.5px 0 31.5px;
+}
+
+.navigation__logo {
+  font-family: 'RalewayHeavy', sans-serif;
+  font-size: 28px;
+  line-height: 33px;
+  text-transform: uppercase;
+  color: $white;
+
+  & span {
+    color: $blue2;
+  }
+}
+
+.navigation__links {
+  display: flex;
+}
+
+.navigation__link {
+  font-family: 'LatoSemibold', sans-serif;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin-right: 60px;
+  transition: $transition;
+  color: $white;
+
+  &:hover {
+    color: $blue3;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

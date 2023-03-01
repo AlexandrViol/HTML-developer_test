@@ -1,0 +1,56 @@
+.footer {
+  padding: 30px 0;
+  background-color: $semiDarkGray;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__policy {
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: $white;
+}
+
+.footer__divider {
+  width: 1px;
+  height: 18px;
+  background: $divideGray;
+}
+
+.footer__section-wrapper {
+  display: flex;
+  gap: 38px;
+}
+
+.footer__payment {
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: $divideGray;
+}
+
+.footer__link {
+  @extend .footer__payment;
+  color: $white;
+  transition: $transition;
+
+  &:hover {
+    color: $blue3;
+    &>img {
+      filter: drop-shadow(0 0 8px $blue);
+    }
+  }
+}
+
+.footer__link-img {
+  width: 20px;
+  height: 20px;
+  transition: $transition;
+}

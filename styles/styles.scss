@@ -24,7 +24,7 @@ $error: red;
 .header {
   padding-top: 203px;
   padding-bottom: 202px;
-  background-image: url(../img/header.png);
+  background-image: url(../img/header_c.png);
   background-size: cover;
 
   @include lg {
@@ -40,6 +40,7 @@ $error: red;
     padding-top: 80px;
     padding-bottom: 60px;
     background-position: left;
+    background-image: url(../img/header_mob.png);
   }
 }
 
@@ -130,10 +131,18 @@ $error: red;
     left: 0;
     height: 100%;
     width: 100%;
-    background-image: url(../img/map.png);
+    background-image: url(../img/map_c.png);
     background-repeat: no-repeat;
     background-position-y: -56px;
     opacity: 0.1;
+
+    @include lg {
+      background-position: center;
+    }
+    @include xlm {
+      background-image: url(../img/map_mob.png);
+      background-size: cover;
+    }
   }
 }
 
@@ -205,6 +214,11 @@ $error: red;
   border: 5px solid $blue4;
   border-radius: 100%;
   margin-bottom: 20px;
+
+  & img {
+    width: 55px;
+    height: 55px;
+  }
 
   @include sm {
     width: 80px;

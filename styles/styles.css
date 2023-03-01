@@ -672,6 +672,11 @@ input[type=range]:focus::-ms-fill-upper {
   justify-content: center;
 }
 
+.input-file__icon {
+  width: 17px;
+  height: 20px;
+}
+
 .input-file__text {
   font-family: "LatoSemibold", sans-serif;
   font-size: 15px;
@@ -701,7 +706,7 @@ input[type=range]:focus::-ms-fill-upper {
 .header {
   padding-top: 203px;
   padding-bottom: 202px;
-  background-image: url(../img/header.png);
+  background-image: url(../img/header_c.png);
   background-size: cover;
 }
 @media (max-width: 1280px) {
@@ -722,6 +727,7 @@ input[type=range]:focus::-ms-fill-upper {
     padding-top: 80px;
     padding-bottom: 60px;
     background-position: left;
+    background-image: url(../img/header_mob.png);
   }
 }
 
@@ -825,10 +831,21 @@ input[type=range]:focus::-ms-fill-upper {
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: url(../img/map.png);
+  background-image: url(../img/map_c.png);
   background-repeat: no-repeat;
   background-position-y: -56px;
   opacity: 0.1;
+}
+@media (max-width: 1280px) {
+  .ordering:before {
+    background-position: center;
+  }
+}
+@media (max-width: 568px) {
+  .ordering:before {
+    background-image: url(../img/map_mob.png);
+    background-size: cover;
+  }
 }
 
 .ordering__subtitle {
@@ -909,6 +926,10 @@ input[type=range]:focus::-ms-fill-upper {
   border: 5px solid #286690;
   border-radius: 100%;
   margin-bottom: 20px;
+}
+.ordering__image-wrapper img {
+  width: 55px;
+  height: 55px;
 }
 @media (max-width: 768px) {
   .ordering__image-wrapper {
